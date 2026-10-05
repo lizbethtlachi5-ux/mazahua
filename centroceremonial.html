@@ -1,0 +1,2555 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Centro Ceremonial Mazahua</title>
+
+
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- CONFIGURACIÓN TAILWIND -->
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        mazahua: {
+
+                            fondo: "#f5ead7",
+
+                            crema: "#fffaf0",
+
+                            beige: "#ead7b7",
+
+                            cafe: "#5c3b1e",
+
+                            cafe2: "#7a3f2c",
+
+                            dorado: "#b9823d",
+
+                            dorado2: "#d1a15b",
+
+                            verde: "#527044",
+
+                            verde2: "#687b32",
+
+                            rojo: "#a94732",
+
+                            texto: "#3e2a1f"
+
+                        }
+
+                    },
+
+
+                    fontFamily: {
+
+                        serifmazahua: [
+                            "Georgia",
+                            "Times New Roman",
+                            "serif"
+                        ]
+
+                    },
+
+
+                    keyframes: {
+
+                        aparecer: {
+
+                            "0%": {
+
+                                opacity: "0",
+
+                                transform:
+                                    "translateY(35px)"
+
+                            },
+
+                            "100%": {
+
+                                opacity: "1",
+
+                                transform:
+                                    "translateY(0)"
+
+                            }
+
+                        },
+
+
+                        flotar: {
+
+                            "0%, 100%": {
+
+                                transform:
+                                    "translateY(0)"
+
+                            },
+
+                            "50%": {
+
+                                transform:
+                                    "translateY(-6px)"
+
+                            }
+
+                        }
+
+                    },
+
+
+                    animation: {
+
+                        aparecer:
+                            "aparecer 0.8s ease both",
+
+                        flotar:
+                            "flotar 3s ease-in-out infinite"
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+    <!-- ESTILOS COMPLEMENTARIOS -->
+
+    <style>
+
+        html {
+
+            scroll-behavior: smooth;
+
+            scroll-padding-top: 190px;
+
+        }
+
+
+        body {
+
+            overflow-x: hidden;
+
+        }
+
+
+        /* Scroll */
+
+        ::-webkit-scrollbar {
+
+            width: 10px;
+
+        }
+
+
+        ::-webkit-scrollbar-track {
+
+            background: #ead7b7;
+
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+
+            background: #a94732;
+
+            border-radius: 20px;
+
+        }
+
+
+        ::-webkit-scrollbar-thumb:hover {
+
+            background: #7a3f2c;
+
+        }
+
+
+        /* Animación de entrada */
+
+        .seccion-animada {
+
+            animation: aparecer 0.8s ease both;
+
+        }
+
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(35px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        /* Accesibilidad */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            * {
+
+                scroll-behavior: auto !important;
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+
+            }
+
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 1024px) {
+
+            html {
+
+                scroll-padding-top: 120px;
+
+            }
+
+        }
+
+
+        /* CELULAR */
+
+        @media (max-width: 640px) {
+
+            html {
+
+                scroll-padding-top: 90px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body
+    class="bg-mazahua-fondo
+           text-mazahua-texto
+           font-sans
+           leading-relaxed">
+
+
+<!-- ===================================================== -->
+<!-- HEADER -->
+<!-- ===================================================== -->
+
+<header
+    class="fixed
+           left-0
+           top-0
+           z-[2000]
+           flex
+           h-[110px]
+           w-full
+           items-center
+           justify-center
+           border-b-[5px]
+           border-mazahua-dorado2
+           bg-[linear-gradient(rgba(83,48,32,.90),rgba(129,72,43,.90)),url('mazahua/img1.jpg')]
+           bg-cover
+           bg-center
+           px-4
+           text-center
+           text-white
+           shadow-[0_5px_18px_rgba(60,35,20,.35)]
+           sm:h-[125px]">
+
+
+    <div>
+
+        <p
+            class="mb-1
+                   text-xs
+                   uppercase
+                   tracking-[4px]
+                   text-[#f5d9a8]
+                   sm:text-sm">
+
+            Cultura • Tradición • Identidad
+
+        </p>
+
+
+        <h1
+            class="font-serifmazahua
+                   text-3xl
+                   font-bold
+                   capitalize
+                   tracking-wide
+                   [text-shadow:3px_3px_0_#5c3b1e]
+                   sm:text-4xl
+                   md:text-5xl">
+
+            Centro Ceremonial Mazahua
+
+        </h1>
+
+    </div>
+
+</header>
+
+
+
+<!-- ===================================================== -->
+<!-- NAV DESKTOP -->
+<!-- ===================================================== -->
+
+<nav
+    class="fixed
+           left-0
+           top-[110px]
+           z-[1999]
+           hidden
+           min-h-[70px]
+           w-full
+           items-center
+           justify-center
+           border-b-4
+           border-mazahua-dorado
+           bg-[rgba(91,56,40,.98)]
+           px-3
+           py-2
+           shadow-[0_5px_15px_rgba(0,0,0,.25)]
+           sm:flex
+           sm:top-[125px]">
+
+
+    <div
+        class="flex
+               max-w-[1400px]
+               flex-wrap
+               justify-center
+               gap-1">
+
+
+        <a href="#Inicio"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Inicio
+
+        </a>
+
+
+        <a href="#Sobrenosotros"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Sobre Nosotros
+
+        </a>
+
+
+        <a href="#Misionvisión"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Misión
+
+        </a>
+
+
+        <a href="#ServicioProductos"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Servicios
+
+        </a>
+
+
+        <a href="#clientesaliadosestrateguicos"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Clientes
+
+        </a>
+
+
+        <a href="#galeriaportafolio"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Galería
+
+        </a>
+
+
+        <a href="#testimonioscasosdeexito"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Casos de éxito
+
+        </a>
+
+
+        <a href="#video"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Videos
+
+        </a>
+
+
+        <a href="#ubicacion"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Ubicación
+
+        </a>
+
+
+        <a href="#formulariodecontacto"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Contacto
+
+        </a>
+
+
+        <a href="#redessocialesenlacesexternos"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Redes
+
+        </a>
+
+
+        <a href="#avisodeprivasidad"
+            class="rounded-full
+                   px-3
+                   py-2
+                   text-sm
+                   font-bold
+                   text-[#fff4dc]
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:bg-mazahua-rojo
+                   hover:shadow-lg">
+
+            Privacidad
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ===================================================== -->
+<!-- MENÚ CELULAR -->
+<!-- ===================================================== -->
+
+<div
+    class="fixed
+           left-0
+           top-[110px]
+           z-[2100]
+           flex
+           w-full
+           justify-end
+           bg-[rgba(91,56,40,.98)]
+           px-4
+           py-3
+           shadow-lg
+           sm:hidden">
+
+
+    <button
+        id="menuBtn"
+        onclick="abrirMenu()"
+        class="rounded-xl
+               border-2
+               border-mazahua-dorado2
+               bg-mazahua-cafe
+               px-4
+               py-2
+               text-2xl
+               text-white
+               transition
+               hover:bg-mazahua-rojo">
+
+        ☰
+
+    </button>
+
+</div>
+
+
+
+<!-- ===================================================== -->
+<!-- MENÚ DESPLEGABLE CELULAR -->
+<!-- ===================================================== -->
+
+<div
+    id="menuMovil"
+    class="fixed
+           left-0
+           top-[166px]
+           z-[2050]
+           hidden
+           w-full
+           max-h-[70vh]
+           overflow-y-auto
+           bg-[rgba(91,56,40,.98)]
+           p-4
+           shadow-2xl
+           sm:hidden">
+
+
+    <div class="grid gap-2">
+
+
+        <a href="#Inicio"
+            onclick="cerrarMenu()"
+            class="rounded-xl
+                   bg-mazahua-cafe
+                   px-4
+                   py-3
+                   text-center
+                   font-bold
+                   text-white
+                   transition
+                   hover:bg-mazahua-rojo">
+
+            Inicio
+
+        </a>
+
+
+        <a href="#Sobrenosotros"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Sobre Nosotros
+
+        </a>
+
+
+        <a href="#Misionvisión"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Misión y Visión
+
+        </a>
+
+
+        <a href="#ServicioProductos"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Servicios
+
+        </a>
+
+
+        <a href="#clientesaliadosestrateguicos"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Clientes
+
+        </a>
+
+
+        <a href="#galeriaportafolio"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Galería
+
+        </a>
+
+
+        <a href="#testimonioscasosdeexito"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Casos de éxito
+
+        </a>
+
+
+        <a href="#video"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Videos
+
+        </a>
+
+
+        <a href="#ubicacion"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Ubicación
+
+        </a>
+
+
+        <a href="#formulariodecontacto"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Contacto
+
+        </a>
+
+
+        <a href="#redessocialesenlacesexternos"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Redes sociales
+
+        </a>
+
+
+        <a href="#avisodeprivasidad"
+            onclick="cerrarMenu()"
+            class="rounded-xl bg-mazahua-cafe px-4 py-3 text-center font-bold text-white hover:bg-mazahua-rojo">
+
+            Privacidad
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================================================== -->
+<!-- CONTENIDO -->
+<!-- ===================================================== -->
+
+<main
+    class="mx-auto
+           w-[94%]
+           max-w-[1250px]
+           pb-10
+           pt-[175px]
+           sm:w-[92%]
+           sm:pt-[200px]">
+
+
+
+<!-- ===================================================== -->
+<!-- INICIO -->
+<!-- ===================================================== -->
+
+<section
+    id="Inicio"
+    class="seccion-animada
+           overflow-hidden
+           rounded-3xl
+           border
+           border-mazahua-dorado2
+           bg-gradient-to-br
+           from-mazahua-beige
+           to-[#f5dfb7]
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <div class="mx-auto max-w-5xl text-center">
+
+
+        <span
+            class="inline-block
+                   rounded-full
+                   bg-mazahua-verde
+                   px-5
+                   py-2
+                   text-sm
+                   font-bold
+                   uppercase
+                   tracking-widest
+                   text-white
+                   shadow-md">
+
+            Bienvenidos
+
+        </span>
+
+
+        <h2
+            class="mt-5
+                   font-serifmazahua
+                   text-2xl
+                   font-bold
+                   text-mazahua-cafe2
+                   sm:text-3xl
+                   md:text-4xl">
+
+            Te doy la bienvenida a esta página web
+
+        </h2>
+
+
+        <p
+            class="mx-auto
+                   mt-4
+                   max-w-3xl
+                   text-center
+                   text-base
+                   text-[#5e4635]
+                   sm:text-lg">
+
+            Conoce la cultura, tradiciones, naturaleza y riqueza
+            del pueblo mazahua.
+
+        </p>
+
+
+        <img
+            src="mazahua/img1.jpg"
+            alt="Centro Ceremonial Mazahua"
+            class="mx-auto
+                   mt-8
+                   w-full
+                   max-w-4xl
+                   rounded-2xl
+                   border-4
+                   border-mazahua-dorado
+                   object-cover
+                   shadow-2xl
+                   transition
+                   duration-500
+                   hover:-translate-y-2
+                   hover:scale-[1.02]"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- SOBRE NOSOTROS -->
+<!-- ===================================================== -->
+
+<section
+    id="Sobrenosotros"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           bg-mazahua-crema
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="mb-6
+               text-center
+               font-serifmazahua
+               text-3xl
+               font-bold
+               text-mazahua-cafe2
+               sm:text-4xl">
+
+        Sobre nosotros
+
+    </h1>
+
+
+    <div
+        class="grid
+               items-center
+               gap-8
+               md:grid-cols-2">
+
+
+        <div>
+
+            <p
+                class="text-justify
+                       text-base
+                       leading-8
+                       sm:text-lg">
+
+                El Centro Ceremonial Mazahua es un espacio dedicado
+                al encuentro, la identidad y la preservación de las
+                tradiciones del pueblo mazahua. Nuestro proyecto busca
+                crear un lugar donde la cultura, la arquitectura y la
+                naturaleza se relacionen de manera armónica.
+
+            </p>
+
+        </div>
+
+
+        <img
+            src="mazahua/img11.jpg"
+            alt="Centro Ceremonial Mazahua"
+            class="mx-auto
+                   w-full
+                   max-w-lg
+                   rounded-2xl
+                   border-4
+                   border-mazahua-dorado2
+                   shadow-xl
+                   transition
+                   duration-500
+                   hover:scale-[1.03]"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- VISIÓN -->
+<!-- ===================================================== -->
+
+<section
+    id="Misionvisión"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           bg-gradient-to-br
+           from-[#f9f0dd]
+           to-[#ead7b7]
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="mb-6
+               text-center
+               font-serifmazahua
+               text-3xl
+               font-bold
+               text-mazahua-cafe2
+               sm:text-4xl">
+
+        Visión
+
+    </h1>
+
+
+    <div
+        class="grid
+               items-center
+               gap-8
+               md:grid-cols-2">
+
+
+        <img
+            src="mazahua/img4.jpg"
+            alt="Visión"
+            class="mx-auto
+                   order-2
+                   w-full
+                   max-w-lg
+                   rounded-2xl
+                   border-4
+                   border-mazahua-dorado2
+                   shadow-xl
+                   transition
+                   duration-500
+                   hover:scale-[1.03]
+                   md:order-1"
+        >
+
+
+        <p
+            class="order-1
+                   text-justify
+                   text-base
+                   leading-8
+                   md:order-2
+                   sm:text-lg">
+
+            Crear un espacio arquitectónico que respete y represente
+            la identidad mazahua, integrando elementos culturales,
+            naturales y contemporáneos para generar una experiencia
+            de aprendizaje, convivencia y reflexión.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- SERVICIOS -->
+<!-- ===================================================== -->
+
+<section
+    id="ServicioProductos"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           bg-[#f1e3c8]
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="mb-8
+               text-center
+               font-serifmazahua
+               text-3xl
+               font-bold
+               text-mazahua-cafe2
+               sm:text-4xl">
+
+        Servicios / Productos
+
+    </h1>
+
+
+    <div
+        class="grid
+               gap-6
+               md:grid-cols-2">
+
+
+        <!-- SERVICIOS -->
+
+        <div
+            class="rounded-2xl
+                   bg-mazahua-crema
+                   p-6
+                   shadow-lg
+                   transition
+                   duration-300
+                   hover:-translate-y-2
+                   hover:shadow-2xl">
+
+
+            <h3
+                class="mb-5
+                       text-2xl
+                       font-bold
+                       text-mazahua-verde">
+
+                🌿 Servicios
+
+            </h3>
+
+
+            <ul class="space-y-3">
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Ceremonias tradicionales:</b>
+                    Espacios para actividades ceremoniales y culturales.
+
+                </li>
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Recorridos culturales:</b>
+                    Experiencias para conocer la historia y cosmovisión mazahua.
+
+                </li>
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Talleres artesanales:</b>
+                    Actividades de bordado, textiles y elaboración de artesanías.
+
+                </li>
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Eventos comunitarios:</b>
+                    Espacios para reuniones, festividades y encuentros.
+
+                </li>
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Actividades educativas:</b>
+                    Talleres y experiencias sobre cultura y tradiciones.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- PRODUCTOS -->
+
+        <div
+            class="rounded-2xl
+                   bg-mazahua-crema
+                   p-6
+                   shadow-lg
+                   transition
+                   duration-300
+                   hover:-translate-y-2
+                   hover:shadow-2xl">
+
+
+            <h3
+                class="mb-5
+                       text-2xl
+                       font-bold
+                       text-mazahua-verde">
+
+                🧵 Productos
+
+            </h3>
+
+
+            <ul class="space-y-3">
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Textiles y bordados:</b>
+                    Piezas inspiradas en diseños y técnicas tradicionales.
+
+                </li>
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Artesanías:</b>
+                    Objetos decorativos y representativos elaborados por artesanos.
+
+                </li>
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Cerámica y piezas de barro:</b>
+                    Productos elaborados de manera artesanal.
+
+                </li>
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Productos gastronómicos:</b>
+                    Alimentos y productos tradicionales de la región.
+
+                </li>
+
+
+                <li class="rounded-lg bg-[#f1e3c8] p-3">
+
+                    <b>Recuerdos culturales:</b>
+                    Pequeños objetos representativos para visitantes.
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <img
+        src="mazahua/productos.jpg"
+        alt="Productos"
+        class="mx-auto
+               mt-10
+               h-64
+               w-64
+               rounded-full
+               border-8
+               border-mazahua-dorado2
+               object-cover
+               shadow-2xl
+               transition
+               duration-500
+               hover:scale-105"
+    >
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- CLIENTES -->
+<!-- ===================================================== -->
+
+<section
+    id="clientesaliadosestrateguicos"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           bg-[#e7ead7]
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="mb-8
+               text-center
+               font-serifmazahua
+               text-3xl
+               font-bold
+               text-mazahua-cafe2
+               sm:text-4xl">
+
+        Clientes y aliados estratégicos
+
+    </h1>
+
+
+    <div
+        class="grid
+               gap-8
+               md:grid-cols-2">
+
+
+        <div
+            class="rounded-2xl
+                   bg-white/70
+                   p-6
+                   shadow-lg">
+
+
+            <h2
+                class="mb-5
+                       text-2xl
+                       font-bold
+                       text-mazahua-verde">
+
+                Clientes
+
+            </h2>
+
+
+            <ul class="space-y-3">
+
+
+                <li>🌎 Turistas culturales</li>
+
+                <li>👨‍👩‍👧 Familias y visitantes</li>
+
+                <li>🎓 Estudiantes y escuelas</li>
+
+                <li>🔬 Investigadores y universidades</li>
+
+                <li>🧵 Compradores de artesanías</li>
+
+                <li>🌳 Visitantes interesados en la naturaleza</li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div
+            class="rounded-2xl
+                   bg-white/70
+                   p-6
+                   shadow-lg">
+
+
+            <h2
+                class="mb-5
+                       text-2xl
+                       font-bold
+                       text-mazahua-verde">
+
+                Aliados estratégicos
+
+            </h2>
+
+
+            <ul class="space-y-3">
+
+
+                <li>🤝 Consejo Supremo Mazahua</li>
+
+                <li>🏛️ Ayuntamiento de San Felipe del Progreso</li>
+
+                <li>🏛️ Instituciones culturales y turísticas</li>
+
+                <li>🌿 CEPANAF</li>
+
+                <li>🧵 Artesanos y artesanas mazahuas</li>
+
+                <li>🎓 Escuelas y universidades</li>
+
+                <li>🚌 Prestadores de servicios turísticos</li>
+
+                <li>🏡 Comunidades mazahuas</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <img
+        src="mazahua/aliados.jpg"
+        alt="Aliados estratégicos"
+        class="mx-auto
+               mt-10
+               h-64
+               w-64
+               rounded-2xl
+               border-4
+               border-mazahua-dorado2
+               object-cover
+               shadow-2xl"
+    >
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- GALERÍA -->
+<!-- ===================================================== -->
+
+<section
+    id="galeriaportafolio"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           bg-mazahua-crema
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="mb-10
+               text-center
+               font-serifmazahua
+               text-3xl
+               font-bold
+               text-mazahua-cafe2
+               sm:text-4xl">
+
+        Galería
+
+    </h1>
+
+
+    <div
+        class="grid
+               grid-cols-2
+               gap-3
+               sm:grid-cols-3
+               md:grid-cols-4
+               lg:grid-cols-5">
+
+
+        <!-- IMÁGENES -->
+
+        <a href="mazahua/img10.jpg" class="group">
+
+            <img
+                src="mazahua/img10.jpg"
+                alt="Galería"
+                class="h-36
+                       w-full
+                       rounded-xl
+                       border-4
+                       border-mazahua-dorado
+                       object-cover
+                       shadow-md
+                       transition
+                       duration-300
+                       group-hover:scale-105
+                       group-hover:rotate-1
+                       group-hover:border-mazahua-rojo
+                       group-hover:shadow-xl
+                       sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img12.jpg" class="group">
+
+            <img
+                src="mazahua/img12.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img13.jpg" class="group">
+
+            <img
+                src="mazahua/img13.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img14.jpg" class="group">
+
+            <img
+                src="mazahua/img14.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img15.jpg" class="group">
+
+            <img
+                src="mazahua/img15.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img3.jpg" class="group">
+
+            <img
+                src="mazahua/img3.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img2.jpg" class="group">
+
+            <img
+                src="mazahua/img2.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img6.jpg" class="group">
+
+            <img
+                src="mazahua/img6.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img4.jpg" class="group">
+
+            <img
+                src="mazahua/img4.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img5.jpg" class="group">
+
+            <img
+                src="mazahua/img5.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img1.jpg" class="group">
+
+            <img
+                src="mazahua/img1.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img7.jpg" class="group">
+
+            <img
+                src="mazahua/img7.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img8.jpg" class="group">
+
+            <img
+                src="mazahua/img8.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img9.jpg" class="group">
+
+            <img
+                src="mazahua/img9.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+
+        <a href="mazahua/img11.jpg" class="group">
+
+            <img
+                src="mazahua/img11.jpg"
+                alt="Galería"
+                class="h-36 w-full rounded-xl border-4 border-mazahua-dorado object-cover shadow-md transition duration-300 group-hover:scale-105 group-hover:rotate-1 group-hover:border-mazahua-rojo sm:h-44"
+            >
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- CASOS DE ÉXITO -->
+<!-- ===================================================== -->
+
+<section
+    id="testimonioscasosdeexito"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           bg-mazahua-crema
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="mb-8
+               text-center
+               font-serifmazahua
+               text-3xl
+               font-bold
+               text-mazahua-cafe2
+               sm:text-4xl">
+
+        Testimonios y casos de éxito
+
+    </h1>
+
+
+    <div
+        class="grid
+               gap-5
+               md:grid-cols-2">
+
+
+        <article
+            class="rounded-2xl
+                   border-l-8
+                   border-mazahua-rojo
+                   bg-[#f1e3c8]
+                   p-5
+                   shadow-md
+                   transition
+                   duration-300
+                   hover:-translate-y-2
+                   hover:shadow-xl">
+
+
+            <h2
+                class="mb-3
+                       text-xl
+                       font-bold
+                       text-mazahua-cafe2">
+
+                Preservación cultural
+
+            </h2>
+
+
+            <p class="text-justify">
+
+                El Centro Ceremonial Mazahua funciona como un espacio
+                para preservar y difundir las tradiciones, historia y
+                expresiones culturales del pueblo mazahua.
+
+            </p>
+
+        </article>
+
+
+        <article
+            class="rounded-2xl border-l-8 border-mazahua-rojo bg-[#f1e3c8] p-5 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+
+            <h2
+                class="mb-3 text-xl font-bold text-mazahua-cafe2">
+
+                Cultura y naturaleza
+
+            </h2>
+
+
+            <p class="text-justify">
+
+                El centro integra actividades culturales con el entorno
+                natural, ofreciendo espacios para senderismo, convivencia
+                y actividades culturales.
+
+            </p>
+
+        </article>
+
+
+        <article
+            class="rounded-2xl border-l-8 border-mazahua-rojo bg-[#f1e3c8] p-5 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+
+            <h2
+                class="mb-3 text-xl font-bold text-mazahua-cafe2">
+
+                Ceremonias tradicionales
+
+            </h2>
+
+
+            <p class="text-justify">
+
+                Sus espacios son utilizados para ceremonias, rituales
+                y asambleas tradicionales de la comunidad mazahua.
+
+            </p>
+
+        </article>
+
+
+        <article
+            class="rounded-2xl border-l-8 border-mazahua-rojo bg-[#f1e3c8] p-5 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+
+            <h2
+                class="mb-3 text-xl font-bold text-mazahua-cafe2">
+
+                Artesanía mazahua
+
+            </h2>
+
+
+            <p class="text-justify">
+
+                El centro promueve la elaboración y exhibición de
+                artesanías, textiles y prendas tradicionales de la
+                cultura mazahua.
+
+            </p>
+
+        </article>
+
+
+        <article
+            class="rounded-2xl border-l-8 border-mazahua-rojo bg-[#f1e3c8] p-5 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl md:col-span-2">
+
+
+            <h2
+                class="mb-3 text-xl font-bold text-mazahua-cafe2">
+
+                Educación y cultura
+
+            </h2>
+
+
+            <p class="text-justify">
+
+                El Centro Ceremonial ha sido sede de encuentros y
+                actividades orientadas a la difusión de las culturas
+                indígenas.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<<!-- ===================================================== -->
+<!-- VIDEOS -->
+<!-- ===================================================== -->
+
+<section
+    id="video"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           border-4
+           border-[#8b5a2b]
+           bg-mazahua-crema
+           p-4
+           shadow-xl
+           sm:p-6
+           md:p-8
+           lg:p-10">
+
+    <h1
+        class="mb-6
+               text-center
+               font-serifmazahua
+               text-2xl
+               font-bold
+               text-mazahua-cafe
+               sm:mb-8
+               sm:text-3xl
+               md:text-4xl">
+
+        Videos sobre el lugar
+
+    </h1>
+
+
+    <!-- CONTENEDOR DE VIDEOS -->
+
+    <div
+        class="grid
+               w-full
+               grid-cols-1
+               gap-6
+               lg:grid-cols-2">
+
+
+        <!-- ================= VIDEO 1 ================= -->
+
+        <article
+            class="w-full
+                   min-w-0
+                   overflow-hidden
+                   rounded-2xl
+                   bg-[#ead5b5]
+                   p-3
+                   shadow-lg
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:shadow-2xl
+                   sm:p-4">
+
+
+            <div
+                class="mb-4
+                       rounded-xl
+                       bg-mazahua-verde2
+                       px-3
+                       py-3
+                       text-center
+                       text-sm
+                       font-bold
+                       text-white
+                       sm:text-base">
+
+                🎥 Video 1
+
+            </div>
+
+
+            <!-- CONTENEDOR RESPONSIVO -->
+
+            <div
+                class="relative
+                       aspect-video
+                       w-full
+                       overflow-hidden
+                       rounded-xl
+                       bg-black
+                       shadow-md">
+
+
+                <iframe
+                    src="https://www.youtube.com/embed/iKh5QCQVals?si=X_xh5_q9zg-dzv6R"
+                    title="Video sobre el Centro Ceremonial Mazahua"
+                    class="absolute
+                           inset-0
+                           h-full
+                           w-full
+                           border-0"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- ================= VIDEO 2 ================= -->
+
+        <article
+            class="w-full
+                   min-w-0
+                   overflow-hidden
+                   rounded-2xl
+                   bg-[#ead5b5]
+                   p-3
+                   shadow-lg
+                   transition
+                   duration-300
+                   hover:-translate-y-1
+                   hover:shadow-2xl
+                   sm:p-4">
+
+
+            <div
+                class="mb-4
+                       rounded-xl
+                       bg-mazahua-verde2
+                       px-3
+                       py-3
+                       text-center
+                       text-sm
+                       font-bold
+                       text-white
+                       sm:text-base">
+
+                🎥 Video 2
+
+            </div>
+
+
+            <!-- CONTENEDOR RESPONSIVO -->
+
+            <div
+                class="relative
+                       aspect-video
+                       w-full
+                       overflow-hidden
+                       rounded-xl
+                       bg-black
+                       shadow-md">
+
+
+                <iframe
+                    src="https://www.youtube.com/embed/_fxc724YT18?si=UIy0Ff6TKWOPaGOW"
+                    title="Video sobre la cultura Mazahua"
+                    class="absolute
+                           inset-0
+                           h-full
+                           w-full
+                           border-0"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+        </article>
+
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- UBICACIÓN -->
+<!-- ===================================================== -->
+
+<section
+    id="ubicacion"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           border-4
+           border-mazahua-verde2
+           bg-mazahua-crema
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="text-center
+               font-serifmazahua
+               text-4xl
+               font-bold
+               text-mazahua-verde2
+               [text-shadow:2px_2px_#d8b47a]
+               sm:text-5xl">
+
+        Ubicación
+
+    </h1>
+
+
+    <h2
+        class="mb-8
+               mt-3
+               text-center
+               font-serifmazahua
+               text-2xl
+               font-bold
+               text-[#754c29]
+               sm:text-3xl">
+
+        Centro Ceremonial Mazahua
+
+    </h2>
+
+
+    <div
+        class="grid
+               overflow-hidden
+               rounded-2xl
+               shadow-xl
+               md:grid-cols-[280px_1fr]">
+
+
+        <div
+            class="bg-mazahua-verde2
+                   p-5
+                   text-center
+                   font-bold
+                   text-white
+                   md:col-span-2">
+
+            Información del lugar
+
+        </div>
+
+
+        <div class="bg-[#fdf6e8] p-5">
+
+
+            <img
+                src="mazahua/img14.jpg"
+                alt="Centro Ceremonial Mazahua"
+                class="mx-auto
+                       h-56
+                       w-56
+                       rounded-2xl
+                       border-4
+                       border-[#9b6a35]
+                       object-cover
+                       shadow-lg
+                       transition
+                       hover:scale-105
+                       sm:h-64
+                       sm:w-64"
+            >
+
+        </div>
+
+
+        <div
+            class="flex
+                   items-center
+                   bg-[#fdf6e8]
+                   p-6
+                   text-justify
+                   leading-8">
+
+
+            El Centro Ceremonial Mazahua es un espacio cultural
+            ubicado en el Estado de México que conserva y difunde
+            las tradiciones, costumbres y cosmovisión del pueblo
+            mazahua. En él se realizan ceremonias y actividades
+            culturales, y su arquitectura y entorno reflejan la
+            relación de esta comunidad con la naturaleza y sus
+            raíces ancestrales.
+
+        </div>
+
+    </div>
+
+
+    <div class="mt-8 overflow-hidden rounded-2xl shadow-xl">
+
+
+        <div
+            class="bg-mazahua-verde2
+                   p-4
+                   text-center
+                   text-xl
+                   font-bold
+                   text-white">
+
+            📍 Ubicación en el mapa
+
+        </div>
+
+
+        <div class="bg-[#fdf6e8] p-3 sm:p-5">
+
+
+            <iframe
+                src="https://www.google.com/maps?q=Centro%20Ceremonial%20Mazahua%2C%20San%20Antonio%20de%20las%20Huertas%2C%20Estado%20de%20M%C3%A9xico&output=embed"
+                loading="lazy"
+                allowfullscreen
+                class="h-[350px]
+                       w-full
+                       rounded-xl
+                       border-4
+                       border-mazahua-verde2
+                       sm:h-[450px]">
+            </iframe>
+
+
+            <p
+                class="mt-4
+                       text-center
+                       font-bold
+                       text-[#4a3524]">
+
+                San Antonio de las Huertas,
+                Estado de México
+
+                <br>
+
+                Centro Ceremonial Mazahua
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- CONTACTO -->
+<!-- ===================================================== -->
+
+<section
+    id="formulariodecontacto"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           bg-[#e8d8b8]
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <form
+        action="https://formspree.io/f/xeaovjbn"
+        method="POST"
+        class="mx-auto max-w-3xl">
+
+
+        <fieldset
+            class="rounded-2xl
+                   border-2
+                   border-mazahua-dorado
+                   bg-mazahua-crema
+                   p-5
+                   shadow-lg
+                   sm:p-8">
+
+
+            <h1
+                class="mb-8
+                       text-center
+                       font-serifmazahua
+                       text-3xl
+                       font-bold
+                       text-mazahua-cafe2
+                       sm:text-4xl">
+
+                Contáctanos
+
+            </h1>
+
+
+            <label
+                class="font-bold
+                       text-[#633b2a]">
+
+                Nombre
+
+            </label>
+
+
+            <input
+                type="text"
+                name="NOMBRE"
+                required
+                class="mt-2
+                       w-full
+                       rounded-xl
+                       border-2
+                       border-[#c8a46b]
+                       bg-white
+                       p-3
+                       outline-none
+                       transition
+                       focus:border-mazahua-rojo
+                       focus:ring-4
+                       focus:ring-mazahua-rojo/20">
+
+
+            <label
+                class="mt-5
+                       block
+                       font-bold
+                       text-[#633b2a]">
+
+                Dirección de correo electrónico
+
+            </label>
+
+
+            <input
+                type="email"
+                name="DIRECCIONDECORREO"
+                required
+                class="mt-2
+                       w-full
+                       rounded-xl
+                       border-2
+                       border-[#c8a46b]
+                       bg-white
+                       p-3
+                       outline-none
+                       transition
+                       focus:border-mazahua-rojo
+                       focus:ring-4
+                       focus:ring-mazahua-rojo/20">
+
+
+            <label
+                class="mt-5
+                       block
+                       font-bold
+                       text-[#633b2a]">
+
+                Mensaje
+
+            </label>
+
+
+            <textarea
+                name="MENSAJE"
+                rows="6"
+                required
+                placeholder="Escribe tu comentario"
+                class="mt-2
+                       w-full
+                       resize-y
+                       rounded-xl
+                       border-2
+                       border-[#c8a46b]
+                       bg-white
+                       p-3
+                       outline-none
+                       transition
+                       focus:border-mazahua-rojo
+                       focus:ring-4
+                       focus:ring-mazahua-rojo/20"></textarea>
+
+
+            <button
+                type="submit"
+                class="mt-6
+                       w-full
+                       rounded-full
+                       bg-mazahua-rojo
+                       px-8
+                       py-3
+                       font-bold
+                       text-white
+                       shadow-lg
+                       transition
+                       duration-300
+                       hover:-translate-y-1
+                       hover:bg-mazahua-cafe2
+                       hover:shadow-xl
+                       sm:w-auto">
+
+                Enviar mensaje
+
+            </button>
+
+        </fieldset>
+
+    </form>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- REDES SOCIALES -->
+<!-- ===================================================== -->
+
+<section
+    id="redessocialesenlacesexternos"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           bg-[#e7ead7]
+           p-5
+           text-center
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="mb-5
+               font-serifmazahua
+               text-3xl
+               font-bold
+               text-mazahua-cafe2
+               sm:text-4xl">
+
+        Redes sociales y enlaces
+
+    </h1>
+
+
+    <p class="mb-8">
+
+        Síguenos y conoce más sobre el Centro Ceremonial Mazahua:
+
+    </p>
+
+
+    <div
+        class="flex
+               flex-wrap
+               justify-center
+               gap-6">
+
+
+        <a
+            href="https://www.facebook.com/p/Centro-Ceremonial-Mazahua-61565694925686/"
+            target="_blank"
+            class="group
+                   rounded-2xl
+                   bg-white
+                   p-4
+                   shadow-lg
+                   transition
+                   duration-300
+                   hover:-translate-y-2
+                   hover:shadow-2xl">
+
+
+            <img
+                src="https://images.icon-icons.com/1195/PNG/512/1490889652-facebook_82510.png"
+                width="60"
+                height="60"
+                alt="Facebook"
+                class="transition group-hover:scale-110">
+
+        </a>
+
+
+        <a
+            href="https://cepanaf.edomex.gob.mx/centro_ceremonial_mazahua"
+            target="_blank"
+            class="group
+                   rounded-2xl
+                   bg-white
+                   p-4
+                   shadow-lg
+                   transition
+                   duration-300
+                   hover:-translate-y-2
+                   hover:shadow-2xl">
+
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJj5oSMwlZLilLklrZFrRrWk9Gnq37sq8Dh5zUzZTwymAQ2dl5HOirxqs&s=10"
+                width="60"
+                height="60"
+                alt="CEPANAF"
+                class="transition group-hover:scale-110">
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- AVISO DE PRIVACIDAD -->
+<!-- ===================================================== -->
+
+<section
+    id="avisodeprivasidad"
+    class="seccion-animada
+           mt-10
+           rounded-3xl
+           border-t-8
+           border-mazahua-dorado
+           bg-[#e8d8b8]
+           p-5
+           shadow-xl
+           sm:p-8
+           md:p-12">
+
+
+    <h1
+        class="mb-8
+               text-center
+               font-serifmazahua
+               text-3xl
+               font-bold
+               text-mazahua-cafe2
+               sm:text-4xl">
+
+        Aviso de privacidad
+
+    </h1>
+
+
+    <div
+        class="mx-auto
+               max-w-4xl
+               space-y-5
+               text-justify
+               leading-8">
+
+
+        <p>
+
+            En el Centro Ceremonial Mazahua respetamos la privacidad
+            de nuestros visitantes y usuarios.
+
+        </p>
+
+
+        <p>
+
+            Los datos personales que se proporcionen serán utilizados
+            únicamente para atender solicitudes de información y contacto.
+
+        </p>
+
+
+        <p>
+
+            No compartiremos información personal con terceros sin
+            autorización, salvo cuando sea requerido por la ley.
+
+        </p>
+
+
+        <p>
+
+            Este sitio web es un proyecto académico.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- ===================================================== -->
+<!-- BOTÓN SUBIR -->
+<!-- ===================================================== -->
+
+<button
+    id="btnArriba"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    class="fixed
+           bottom-5
+           right-5
+           z-[1500]
+           hidden
+           h-12
+           w-12
+           rounded-full
+           bg-mazahua-rojo
+           text-xl
+           text-white
+           shadow-xl
+           transition
+           hover:-translate-y-1
+           hover:bg-mazahua-cafe2">
+
+    ↑
+
+</button>
+
+
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT MENÚ -->
+<!-- ===================================================== -->
+
+<script>
+
+    const menu =
+        document.getElementById("menuMovil");
+
+    const btn =
+        document.getElementById("menuBtn");
+
+
+    function abrirMenu() {
+
+        menu.classList.toggle("hidden");
+
+    }
+
+
+    function cerrarMenu() {
+
+        menu.classList.add("hidden");
+
+    }
+
+
+    /* BOTÓN SUBIR */
+
+    const botonArriba =
+        document.getElementById("btnArriba");
+
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+
+            botonArriba.classList.remove("hidden");
+
+        } else {
+
+            botonArriba.classList.add("hidden");
+
+        }
+
+    });
+
+
+    /* Cerrar menú al cambiar tamaño */
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth >= 640) {
+
+            menu.classList.add("hidden");
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
